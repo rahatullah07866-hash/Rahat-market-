@@ -100,7 +100,7 @@ button:hover{
 #cart{
     display:none;
     position:fixed;
-    right:15px;
+    right:14px;
     top:65px;
     width:300px;
     max-width:90%;
