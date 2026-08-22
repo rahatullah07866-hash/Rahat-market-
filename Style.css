@@ -100,7 +100,7 @@ button:hover{
 #cart{
     display:none;
     position:fixed;
-    right:14px;
+    right:15px;
     top:65px;
     width:300px;
     max-width:90%;
@@ -464,4 +464,33 @@ footer{
     position:static;
     flex-shrink:0;
     background:#e67e22;
+}
+/* Desktop Screen */
+@media (min-width: 768px) {
+
+    .product-container,
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .product {
+        width: 250px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 100px 20px;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
 }
