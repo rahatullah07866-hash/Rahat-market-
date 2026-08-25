@@ -3,13 +3,13 @@
 
 <head>
 
-<link rel="stylesheet" href="Style.css">
-
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sada Market</title>
+<link rel="stylesheet" href="Style.css">
+
+<title>Rahat Shoes</title>
 
 </head>
 
@@ -19,15 +19,16 @@
 <!-- IMAGE VIEWER -->
 
 <div id="imageViewer" onclick="closeImage()">
-    <img id="bigImage">
+    <img id="bigImage" alt="Product Image">
 </div>
 
 
-<!-- CART BUTTON -->
+<!-- SEARCH + CART -->
 
 <div class="top-actions">
 
     <div class="search-box">
+
         <input
             type="text"
             id="searchInput"
@@ -38,6 +39,7 @@
         <button type="button" onclick="searchProducts()">
             🔍
         </button>
+
     </div>
 
     <button
@@ -56,25 +58,28 @@
 
 <div id="cart">
 
-<h2>🛒 Your Cart</h2>
+    <h2>🛒 Your Cart</h2>
 
-<div id="cartItems">
-<p>Your cart is empty.</p>
-</div>
+    <div id="cartItems">
+        <p>Your cart is empty.</p>
+    </div>
 
-<h3>
-Total: PKR <span id="cartTotal">0</span>
-</h3>
+    <h3>
+        Total: PKR <span id="cartTotal">0</span>
+    </h3>
 
-<button type="button" onclick="openCheckout()">
-Checkout
-</button>
+    <button type="button" onclick="openCheckout()">
+        Checkout
+    </button>
 
-<button type="button"
+    <button
+        type="button"
         class="close-btn"
         onclick="toggleCart()">
-Close
-</button>
+
+        Close
+
+    </button>
 
 </div>
 
@@ -83,59 +88,67 @@ Close
 
 <header>
 
-<h1>Rahat Shoes</h1>
+    <h1>Rahat Shoes</h1>
 
-<nav>
+    <nav>
 
-<a href="#home">Home</a>
+        <a href="#home">Home</a>
 
-<a href="#men" onclick="goCategory('men')">
-Men
-</a>
+        <a href="#men" onclick="goCategory('men')">
+            Men
+        </a>
 
-<a href="#women" onclick="goCategory('women')">
-Women
-</a>
+        <a href="#women" onclick="goCategory('women')">
+            Women
+        </a>
 
-<a href="#sports" onclick="goCategory('sports')">
-Sports
-</a>
+        <a href="#sports" onclick="goCategory('sports')">
+            Sports
+        </a>
 
-<a href="#casual" onclick="goCategory('casual')">
-Casual
-</a>
+        <a href="#casual" onclick="goCategory('casual')">
+            Casual
+        </a>
 
-<a href="#sandals" onclick="goCategory('sandals')">
-Sandals
-</a>
+        <a href="#sandals" onclick="goCategory('sandals')">
+            Sandals
+        </a>
 
-<a href="#boots" onclick="goCategory('boots')">
-Boots
-</a>
+        <a href="#boots" onclick="goCategory('boots')">
+            Boots
+        </a>
 
-<a href="#contact">
-Contact
-</a>
+        <a href="#contact">
+            Contact
+        </a>
 
-</nav>
+    </nav>
 
 </header>
 
 
 <!-- HERO -->
-
 <section id="home" class="hero">
 
-<h2>New Summer Collection</h2>
+    <div class="hero-content">
 
-<p>Step Into Style & Comfort</p>
+        <h2>
 
-<button type="button"
-        onclick="goCategory('sports')">
+            <span class="new-text">New</span>
 
-Shop Now
+            <span class="summer-text">SUMMER</span>
 
-</button>
+            <span class="collection-text">COLLECTION</span>
+
+        </h2>
+
+        <p>Step Into Style & Comfort</p>
+
+        <button type="button" onclick="goCategory('sports')">
+            Shop Now
+        </button>
+
+    </div>
 
 </section>
 
@@ -144,41 +157,78 @@ Shop Now
 
 <section class="category-section">
 
-<h2>Shop By Category</h2>
+    <h2>Shop By Category</h2>
 
-<div class="category-container">
+    <div class="category-container">
 
-<div class="category-card" onclick="filterProducts('men')">
-<img src="images/running3.jpg" alt="Men's Shoes">
-<h3>Men's Shoes</h3>
-</div>
 
-<div class="category-card" onclick="filterProducts('women')">
-<img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=80" alt="Women's Shoes">
-<h3>Women's Shoes</h3>
-</div>
+        <div class="category-card" onclick="goCategory('men')">
 
-<div class="category-card" onclick="filterProducts('sports')">
-<img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=500&q=80" alt="Sports Shoes">
-<h3>Sports Shoes</h3>
-</div>
+            <img
+                src="Images/running3.jpg"
+                alt="Men's Shoes">
 
-<div class="category-card" onclick="filterProducts('casual')">
-<img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=500&q=80" alt="Casual Shoes">
-<h3>Casual Shoes</h3>
-</div>
+            <h3>Men's Shoes</h3>
 
-<div class="category-card" onclick="filterProducts('sandals')">
-<img src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=500&q=80" alt="Sandals">
-<h3>Sandals</h3>
-</div>
+        </div>
 
-<div class="category-card" onclick="filterProducts('boots')">
-<img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=500&q=80" alt="Boots">
-<h3>Boots</h3>
-</div>
 
-</div>
+        <div class="category-card" onclick="goCategory('women')">
+
+            <img
+                src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=80"
+                alt="Women's Shoes">
+
+            <h3>Women's Shoes</h3>
+
+        </div>
+
+
+        <div class="category-card" onclick="goCategory('sports')">
+
+            <img
+                src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=500&q=80"
+                alt="Sports Shoes">
+
+            <h3>Sports Shoes</h3>
+
+        </div>
+
+
+        <div class="category-card" onclick="goCategory('casual')">
+
+            <img
+                src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=500&q=80"
+                alt="Casual Shoes">
+
+            <h3>Casual Shoes</h3>
+
+        </div>
+
+
+        <div class="category-card" onclick="goCategory('sandals')">
+
+            <img
+                src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=500&q=80"
+                alt="Sandals">
+
+            <h3>Sandals</h3>
+
+        </div>
+
+
+        <div class="category-card" onclick="goCategory('boots')">
+
+            <img
+                src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=500&q=80"
+                alt="Boots">
+
+            <h3>Boots</h3>
+
+        </div>
+
+
+    </div>
 
 </section>
 
@@ -187,463 +237,462 @@ Shop Now
 
 <section id="products">
 
-<h2>Featured Products</h2>
 
+    <h2>Featured Products</h2>
 
-<!-- MEN -->
 
-<div class="product-category" id="men">
+    <!-- MEN -->
 
-<h3 class="category-title">
-👞 Men's Shoes
-</h3>
+    <div class="product-category" id="men">
 
-<div class="product-row">
+        <h3 class="category-title">👞 Men's Shoes</h3>
 
+        <div class="product-row">
 
-<div class="product"
-     data-name="Sports Sneakers"
-     data-category="men sports">
 
-<div class="sneaker-gallery">
+            <div
+                class="product"
+                data-name="Sports Sneakers"
+                data-category="men sports">
 
-<img src="images/sneaker1.jpg"
-     alt="Sports Sneakers"
-     onclick="openImage(this.src)">
+                <div class="sneaker-gallery">
 
-<img src="images/sneaker2.jpg"
-     alt="Sports Sneakers"
-     onclick="openImage(this.src)">
+                    <img
+                        src="Images/sneaker1.jpg"
+                        alt="Sports Sneakers"
+                        onclick="openImage(this.src)">
 
-</div>
+                    <img
+                        src="Images/sneaker2.jpg"
+                        alt="Sports Sneakers"
+                        onclick="openImage(this.src)">
 
-<h3>Sports Sneakers</h3>
+                </div>
 
-<p>PKR 3999</p>
+                <h3>Sports Sneakers</h3>
 
-<button onclick="addProduct('Sports Sneakers',3999)">
-Add to Cart
-</button>
+                <p>PKR 3999</p>
 
-</div>
+                <button onclick="addProduct('Sports Sneakers',3999)">
+                    Add to Cart
+                </button>
 
+            </div>
 
-<div class="product"
-     data-name="Casual Sneakers"
-     data-category="men casual">
 
-<img
-src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
-alt="Casual Sneakers"
-onclick="openImage(this.src)"
->
+            <div
+                class="product"
+                data-name="Casual Sneakers"
+                data-category="men casual">
 
-<h3>Casual Sneakers</h3>
+                <img
+                    src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+                    alt="Casual Sneakers"
+                    onclick="openImage(this.src)">
 
-<p>PKR 3199</p>
+                <h3>Casual Sneakers</h3>
 
-<button onclick="addProduct('Casual Sneakers',3199)">
-Add to Cart
-</button>
+                <p>PKR 3199</p>
 
-</div>
+                <button onclick="addProduct('Casual Sneakers',3199)">
+                    Add to Cart
+                </button>
 
+            </div>
 
-<div class="product"
-     data-name="Men Sandal"
-     data-category="men sandals">
 
-<img
-src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=600&q=80"
-alt="Men Sandal"
-onclick="openImage(this.src)"
->
+            <div
+                class="product"
+                data-name="Men Sandal"
+                data-category="men sandals">
 
-<h3>Men Sandal</h3>
+                <img
+                    src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=600&q=80"
+                    alt="Men Sandal"
+                    onclick="openImage(this.src)">
 
-<p>PKR 2299</p>
+                <h3>Men Sandal</h3>
 
-<button onclick="addProduct('Men Sandal',2299)">
-Add to Cart
-</button>
+                <p>PKR 2299</p>
 
-</div>
+                <button onclick="addProduct('Men Sandal',2299)">
+                    Add to Cart
+                </button>
 
+            </div>
 
-</div>
-</div>
 
+        </div>
 
-<!-- WOMEN -->
+    </div>
 
-<div class="product-category" id="women">
 
-<h3 class="category-title">
-👠 Women's Shoes
-</h3>
+    <!-- WOMEN -->
 
-<div class="product-row">
+    <div class="product-category" id="women">
 
+        <h3 class="category-title">👠 Women's Shoes</h3>
 
-<div class="product"
-     data-name="Women's Shoes"
-     data-category="women">
+        <div class="product-row">
 
-<img
-src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
-alt="Women's Shoes"
-onclick="openImage(this.src)"
->
 
-<h3>Women's Shoes</h3>
+            <div
+                class="product"
+                data-name="Women's Shoes"
+                data-category="women">
 
-<p>PKR 3499</p>
+                <img
+                    src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+                    alt="Women's Shoes"
+                    onclick="openImage(this.src)">
 
-<button onclick="addProduct('Women Shoes',3499)">
-Add to Cart
-</button>
+                <h3>Women's Shoes</h3>
 
-</div>
+                <p>PKR 3499</p>
 
+                <button onclick="addProduct('Women Shoes',3499)">
+                    Add to Cart
+                </button>
 
-<div class="product"
-     data-name="Women Casual Shoes"
-     data-category="women casual">
+            </div>
 
-<img
-src="images/women casual.jpg"
-alt="Women Casual Shoes"
-onclick="openImage(this.src)"
->
 
-<h3>Women Casual Shoes</h3>
+            <div
+                class="product"
+                data-name="Women Casual Shoes"
+                data-category="women casual">
 
-<p>PKR 3699</p>
+                <img
+                    src="Images/women casual.jpg"
+                    alt="Women Casual Shoes"
+                    onclick="openImage(this.src)">
 
-<button onclick="addProduct('Women Casual Shoes',3699)">
-Add to Cart
-</button>
+                <h3>Women Casual Shoes</h3>
 
-</div>
-  <div class="product"
-     data-name="Women Casual Shoes"
-     data-category="women casual">
+                <p>PKR 3699</p>
 
-<img
-src="images/women casual2.jpg"
-alt="Women Casual Shoes"
-onclick="openImage(this.src)"
->
+                <button onclick="addProduct('Women Casual Shoes',3699)">
+                    Add to Cart
+                </button>
 
-<h3>Women Casual Shoes</h3>
+            </div>
 
-<p>PKR 3699</p>
 
-<button onclick="addProduct('Women Casual Shoes',3699)">
-Add to Cart
-</button>
+            <div
+                class="product"
+                data-name="Women Casual Shoes 2"
+                data-category="women casual">
 
-  </div>
+                <img
+                    src="Images/women casual2.jpg"
+                    alt="Women Casual Shoes"
+                    onclick="openImage(this.src)">
 
+                <h3>Women Casual Shoes</h3>
 
-<div class="product"
-     data-name="Women Sneakers"
-     data-category="women sports">
+                <p>PKR 3699</p>
 
-<img
-src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80"
-alt="Women Sneakers"
-onclick="openImage(this.src)"
->
+                <button onclick="addProduct('Women Casual Shoes 2',3699)">
+                    Add to Cart
+                </button>
 
-<h3>Women Sneakers</h3>
+            </div>
 
-<p>PKR 3999</p>
 
-<button onclick="addProduct('Women Sneakers',3999)">
-Add to Cart
-</button>
+            <div
+                class="product"
+                data-name="Women Sneakers"
+                data-category="women sports">
 
-</div>
-  
+                <img
+                    src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80"
+                    alt="Women Sneakers"
+                    onclick="openImage(this.src)">
 
-</div>
-</div>
+                <h3>Women Sneakers</h3>
 
+                <p>PKR 3999</p>
 
-<!-- SPORTS -->
+                <button onclick="addProduct('Women Sneakers',3999)">
+                    Add to Cart
+                </button>
 
-<div class="product-category" id="sports">
+            </div>
 
-<h3 class="category-title">
-👟 Sports Shoes
-</h3>
 
-<div class="product-row">
+        </div>
 
+    </div>
 
-<div class="product"
-     data-name="Sports Sneakers"
-     data-category="sports men">
 
-<div class="sneaker-gallery">
+    <!-- SPORTS -->
 
+    <div class="product-category" id="sports">
 
+        <h3 class="category-title">👟 Sports Shoes</h3>
 
-<img src="images/sneaker2.jpg"
-     alt="Sports Sneakers"
-     onclick="openImage(this.src)">
+        <div class="product-row">
 
 
+            <div
+                class="product"
+                data-name="Sports Sneakers"
+                data-category="sports men">
 
-</div>
-  
+                <div class="sneaker-gallery">
 
-<h3>Sports Sneakers</h3>
+                    <img
+                        src="Images/sneaker2.jpg"
+                        alt="Sports Sneakers"
+                        onclick="openImage(this.src)">
 
-<p>PKR 3999</p>
+                </div>
 
-<button onclick="addProduct('Sports Sneakers',3999)">
-Add to Cart
-</button>
+                <h3>Sports Sneakers</h3>
 
-</div>
-  <div class="product"
-     data-name="Running Shoes"
-     data-category="sports">
+                <p>PKR 3999</p>
 
-<img
-src="images/running3.jpg"
-alt="Running Shoes"
-onclick="openImage(this.src)"
->
+                <button onclick="addProduct('Sports Sneakers',3999)">
+                    Add to Cart
+                </button>
 
-<h3>Running Shoes</h3>
+            </div>
 
-<p>PKR 4299</p>
 
-<button onclick="addProduct('Running Shoes',4299)">
-Add to Cart
-</button>
+            <div
+                class="product"
+                data-name="Running Shoes 3"
+                data-category="sports">
 
-  </div>
+                <img
+                    src="Images/running3.jpg"
+                    alt="Running Shoes"
+                    onclick="openImage(this.src)">
 
+                <h3>Running Shoes</h3>
 
-<div class="product"
-     data-name="Running Shoes"
-     data-category="sports">
+                <p>PKR 4299</p>
 
-<img
-src="images/running1.jpg"
-alt="Running Shoes"
-onclick="openImage(this.src)"
->
+                <button onclick="addProduct('Running Shoes 3',4299)">
+                    Add to Cart
+                </button>
 
-<h3>Running Shoes</h3>
+            </div>
 
-<p>PKR 4299</p>
 
-<button onclick="addProduct('Running Shoes',4299)">
-Add to Cart
-</button>
+            <div
+                class="product"
+                data-name="Running Shoes 1"
+                data-category="sports">
 
-</div>
+                <img
+                    src="Images/running1.jpg"
+                    alt="Running Shoes"
+                    onclick="openImage(this.src)">
 
+                <h3>Running Shoes</h3>
 
-<div class="product"
-     data-name="Training Shoes"
-     data-category="sports">
+                <p>PKR 4299</p>
 
-<img
-src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=600&q=80"
-alt="Training Shoes"
-onclick="openImage(this.src)"
->
+                <button onclick="addProduct('Running Shoes 1',4299)">
+                    Add to Cart
+                </button>
 
-<h3>Training Shoes</h3>
+            </div>
 
-<p>PKR 4499</p>
 
-<button onclick="addProduct('Training Shoes',4499)">
-Add to Cart
-</button>
+            <div
+                class="product"
+                data-name="Training Shoes"
+                data-category="sports">
 
-</div>
+                <img
+                    src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=600&q=80"
+                    alt="Training Shoes"
+                    onclick="openImage(this.src)">
 
+                <h3>Training Shoes</h3>
 
-</div>
-</div>
+                <p>PKR 4499</p>
 
+                <button onclick="addProduct('Training Shoes',4499)">
+                    Add to Cart
+                </button>
 
-<!-- CASUAL -->
+            </div>
 
-<div class="product-category" id="casual">
 
-<h3 class="category-title">
-👟 Casual Shoes
-</h3>
+        </div>
 
-<div class="product-row">
+    </div>
 
 
-<div class="product"
-     data-name="Casual Sneakers"
-     data-category="casual men">
+    <!-- CASUAL -->
 
-<img
-src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
-alt="Casual Sneakers"
-onclick="openImage(this.src)"
->
+    <div class="product-category" id="casual">
 
-<h3>Casual Sneakers</h3>
+        <h3 class="category-title">👟 Casual Shoes</h3>
 
-<p>PKR 3199</p>
+        <div class="product-row">
 
-<button onclick="addProduct('Casual Sneakers',3199)">
-Add to Cart
-</button>
 
-</div>
+            <div
+                class="product"
+                data-name="Casual Sneakers"
+                data-category="casual men">
 
+                <img
+                    src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+                    alt="Casual Sneakers"
+                    onclick="openImage(this.src)">
 
-<div class="product"
-     data-name="Casual Shoes"
-     data-category="casual">
+                <h3>Casual Sneakers</h3>
 
-<img
-src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80"
-alt="Casual Shoes"
-onclick="openImage(this.src)"
->
+                <p>PKR 3199</p>
 
-<h3>Casual Shoes</h3>
+                <button onclick="addProduct('Casual Sneakers',3199)">
+                    Add to Cart
+                </button>
 
-<p>PKR 3399</p>
+            </div>
 
-<button onclick="addProduct('Casual Shoes',3399)">
-Add to Cart
-</button>
 
-</div>
+            <div
+                class="product"
+                data-name="Casual Shoes"
+                data-category="casual">
 
+                <img
+                    src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80"
+                    alt="Casual Shoes"
+                    onclick="openImage(this.src)">
 
-</div>
-</div>
+                <h3>Casual Shoes</h3>
 
+                <p>PKR 3399</p>
 
-<!-- SANDALS -->
+                <button onclick="addProduct('Casual Shoes',3399)">
+                    Add to Cart
+                </button>
 
-<div class="product-category" id="sandals">
+            </div>
 
-<h3 class="category-title">
-🩴 Sandals
-</h3>
 
-<div class="product-row">
+        </div>
 
+    </div>
 
-<div class="product"
-     data-name="Men Sandal"
-     data-category="sandals men">
 
-<img
-src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=600&q=80"
-alt="Men Sandal"
-onclick="openImage(this.src)"
->
+    <!-- SANDALS -->
 
-<h3>Men Sandal</h3>
+    <div class="product-category" id="sandals">
 
-<p>PKR 2299</p>
+        <h3 class="category-title">🩴 Sandals</h3>
 
-<button onclick="addProduct('Men Sandal',2299)">
-Add to Cart
-</button>
+        <div class="product-row">
 
-</div>
 
+            <div
+                class="product"
+                data-name="Men Sandal"
+                data-category="sandals men">
 
-<div class="product"
-     data-name="Ladies Sandal"
-     data-category="sandals women">
+                <img
+                    src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=600&q=80"
+                    alt="Men Sandal"
+                    onclick="openImage(this.src)">
 
-<img
-src="https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=600&q=80"
-alt="Ladies Sandal"
-onclick="openImage(this.src)"
->
+                <h3>Men Sandal</h3>
 
-<h3>Ladies Sandal</h3>
+                <p>PKR 2299</p>
 
-<p>PKR 2499</p>
+                <button onclick="addProduct('Men Sandal',2299)">
+                    Add to Cart
+                </button>
 
-<button onclick="addProduct('Ladies Sandal',2499)">
-Add to Cart
-</button>
+            </div>
 
-</div>
 
+            <div
+                class="product"
+                data-name="Ladies Sandal"
+                data-category="sandals women">
 
-</div>
-</div>
+                <img
+                    src="https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=600&q=80"
+                    alt="Ladies Sandal"
+                    onclick="openImage(this.src)">
 
+                <h3>Ladies Sandal</h3>
 
-<!-- BOOTS -->
+                <p>PKR 2499</p>
 
-<div class="product-category" id="boots">
+                <button onclick="addProduct('Ladies Sandal',2499)">
+                    Add to Cart
+                </button>
 
-<h3 class="category-title">
-🥾 Boots
-</h3>
+            </div>
 
-<div class="product-row">
 
+        </div>
 
-<div class="product"
-     data-name="Lindy Boots"
-     data-category="boots men">
+    </div>
 
-<img
-src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=600&q=80"
-alt="Lindy Boots"
-onclick="openImage(this.src)"
->
 
-<h3>Lindy Boots</h3>
+    <!-- BOOTS -->
 
-<p>PKR 5499</p>
+    <div class="product-category" id="boots">
 
-<button onclick="addProduct('Lindy Boots',5499)">
-Add to Cart
-</button>
+        <h3 class="category-title">🥾 Boots</h3>
 
-</div>
+        <div class="product-row">
 
 
-<div class="product"
-     data-name="Classic Boots"
-     data-category="boots">
+            <div
+                class="product"
+                data-name="Lindy Boots"
+                data-category="boots men">
 
-<img
-src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80"
-alt="Classic Boots"
-onclick="openImage(this.src)"
->
+                <img
+                    src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=600&q=80"
+                    alt="Lindy Boots"
+                    onclick="openImage(this.src)">
 
-<h3>Classic Boots</h3>
+                <h3>Lindy Boots</h3>
 
-<p>PKR 5999</p>
+                <p>PKR 5499</p>
 
-<button onclick="addProduct('Classic Boots',5999)">
-Add to Cart
-</button>
+                <button onclick="addProduct('Lindy Boots',5499)">
+                    Add to Cart
+                </button>
 
-</div>
+            </div>
 
 
-</div>
-</div>
+            <div
+                class="product"
+                data-name="Classic Boots"
+                data-category="boots">
+
+                <img
+                    src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80"
+                    alt="Classic Boots"
+                    onclick="openImage(this.src)">
+
+                <h3>Classic Boots</h3>
+
+                <p>PKR 5999</p>
+
+                <button onclick="addProduct('Classic Boots',5999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 
 </section>
@@ -653,53 +702,49 @@ Add to Cart
 
 <div id="checkout">
 
-<h2>📦 Checkout</h2>
+    <h2>📦 Checkout</h2>
 
-<input
-type="text"
-id="customerName"
-placeholder="Your Name"
->
+    <input
+        type="text"
+        id="customerName"
+        placeholder="Your Name">
 
-<input
-type="tel"
-id="customerPhone"
-placeholder="Phone Number"
->
+    <input
+        type="tel"
+        id="customerPhone"
+        placeholder="Phone Number">
 
-<input
-type="text"
-id="customerCity"
-placeholder="City"
->
+    <input
+        type="text"
+        id="customerCity"
+        placeholder="City">
 
-<textarea
-id="customerAddress"
-rows="4"
-placeholder="Complete Address">
-</textarea>
+    <textarea
+        id="customerAddress"
+        rows="4"
+        placeholder="Complete Address"></textarea>
 
-<br><br>
+    <br><br>
 
-<button
-type="button"
-class="order-btn"
-onclick="placeOrder()">
+    <button
+        type="button"
+        class="order-btn"
+        onclick="placeOrder()">
 
-📲 Place Order on WhatsApp
+        📲 Place Order on WhatsApp
 
-</button>
+    </button>
 
-<br><br>
+    <br><br>
 
-<button
-type="button"
-class="close-btn"
-onclick="closeCheckout()">
+    <button
+        type="button"
+        class="close-btn"
+        onclick="closeCheckout()">
 
-Cancel
+        Cancel
 
-</button>
+    </button>
 
 </div>
 
@@ -708,32 +753,30 @@ Cancel
 
 <footer id="contact">
 
-<h3>Rahat Shoes</h3>
+    <h3>Rahat Shoes</h3>
 
-<p>Quality Shoes at Affordable Prices.</p>
+    <p>Quality Shoes at Affordable Prices.</p>
 
-<p>© 2026 Rahat Shoes. All Rights Reserved.</p>
+    <p>© 2026 Rahat Shoes. All Rights Reserved.</p>
 
 </footer>
 
 
 <script>
 
-
 /* IMAGE VIEWER */
 
 function openImage(src){
 
-document.getElementById("bigImage").src = src;
+    document.getElementById("bigImage").src = src;
 
-document.getElementById("imageViewer").style.display = "flex";
+    document.getElementById("imageViewer").style.display = "flex";
 
 }
 
-
 function closeImage(){
 
-document.getElementById("imageViewer").style.display = "none";
+    document.getElementById("imageViewer").style.display = "none";
 
 }
 
@@ -742,336 +785,109 @@ document.getElementById("imageViewer").style.display = "none";
 
 let cart = [];
 
-
 function toggleCart(){
 
-document
-.getElementById("cart")
-.classList.toggle("show");
+    document
+        .getElementById("cart")
+        .classList.toggle("show");
 
 }
-
 
 function addProduct(name,price){
 
-const existing =
-cart.find(item => item.name === name);
+    const existing =
+        cart.find(item => item.name === name);
 
+    if(existing){
 
-if(existing){
+        existing.quantity++;
 
-existing.quantity++;
+    }else{
 
-}else{
+        cart.push({
+            name:name,
+            price:price,
+            quantity:1
+        });
 
-cart.push({
-name:name,
-price:price,
-quantity:1
-});
+    }
+
+    updateCart();
+
+    document
+        .getElementById("cart")
+        .classList.add("show");
 
 }
-
-updateCart();
-
-document
-.getElementById("cart")
-.classList.add("show");
-
-}
-
 
 function updateCart(){
 
-const cartItems =
-document.getElementById("cartItems");
+    const cartItems =
+        document.getElementById("cartItems");
 
-const cartTotal =
-document.getElementById("cartTotal");
+    const cartTotal =
+        document.getElementById("cartTotal");
 
-const cartCount =
-document.getElementById("cartCount");
+    const cartCount =
+        document.getElementById("cartCount");
 
-cartItems.innerHTML = "";
+    cartItems.innerHTML = "";
 
-let total = 0;
-let count = 0;
+    let total = 0;
+    let count = 0;
 
+    cart.forEach((item,index)=>{
 
-cart.forEach((item,index)=>{
+        const itemTotal =
+            item.price * item.quantity;
 
-const itemTotal =
-item.price * item.quantity;
+        total += itemTotal;
 
-total += itemTotal;
+        count += item.quantity;
 
-count += item.quantity;
+        const div =
+            document.createElement("div");
 
+        div.className = "cart-item";
 
-const div =
-document.createElement("div");
+        div.innerHTML = `
 
-div.className = "cart-item";
+            <strong>${item.name}</strong>
 
-div.innerHTML = `
+            <p>
+                PKR ${item.price.toLocaleString()}
+            </p>
 
-<strong>${item.name}</strong>
+            <button
+                class="qty-btn"
+                onclick="changeQuantity(${index},-1)">
+                −
+            </button>
 
-<p>
-PKR ${item.price.toLocaleString()}
-</p>
+            ${item.quantity}
 
-<button
-class="qty-btn"
-onclick="changeQuantity(${index},-1)">
-−
-</button>
+            <button
+                class="qty-btn"
+                onclick="changeQuantity(${index},1)">
+                +
+            </button>
 
-${item.quantity}
+            <button
+                class="remove-btn"
+                onclick="removeProduct(${index})">
+                Remove
+            </button>
 
-<button
-class="qty-btn"
-onclick="changeQuantity(${index},1)">
-+
-</button>
+        `;
 
-<button
-class="remove-btn"
-onclick="removeProduct(${index})">
-Remove
-</button>
+        cartItems.appendChild(div);
 
-`;
+    });
 
-cartItems.appendChild(div);
+    if(cart.length === 0){
 
-});
+        cartItems.innerHTML =
+            "<p>Your cart is empty.</p>";
 
+    }
 
-if(cart.length === 0){
-
-cartItems.innerHTML =
-"<p>Your cart is empty.</p>";
-
-}
-
-cartTotal.innerText =
-total.toLocaleString();
-
-cartCount.innerText =
-count;
-
-}
-
-
-function changeQuantity(index,change){
-
-cart[index].quantity += change;
-
-if(cart[index].quantity <= 0){
-
-cart.splice(index,1);
-
-}
-
-updateCart();
-
-}
-
-
-function removeProduct(index){
-
-cart.splice(index,1);
-
-updateCart();
-
-}
-
-
-/* SEARCH */
-
-function searchProducts(){
-
-const search =
-document
-.getElementById("searchInput")
-.value
-.toLowerCase()
-.trim();
-
-
-const products =
-document.querySelectorAll(".product");
-
-
-products.forEach(product=>{
-
-const name =
-product
-.getAttribute("data-name")
-.toLowerCase();
-
-
-if(name.includes(search)){
-
-product.style.display = "block";
-
-}else{
-
-product.style.display = "none";
-
-}
-
-});
-
-}
-
-
-/* CATEGORY SCROLL */
-
-function goCategory(category){
-
-const section =
-document.getElementById(category);
-
-if(section){
-
-section.scrollIntoView({
-behavior:"smooth",
-block:"start"
-});
-
-}
-
-}
-
-
-/* CHECKOUT */
-
-function openCheckout(){
-
-if(cart.length === 0){
-
-alert("Your cart is empty!");
-
-return;
-
-}
-
-document
-.getElementById("checkout")
-.style.display = "block";
-
-}
-
-
-function closeCheckout(){
-
-document
-.getElementById("checkout")
-.style.display = "none";
-
-}
-
-
-/* WHATSAPP */
-
-function placeOrder(){
-
-const name =
-document
-.getElementById("customerName")
-.value
-.trim();
-
-const phone =
-document
-.getElementById("customerPhone")
-.value
-.trim();
-
-const city =
-document
-.getElementById("customerCity")
-.value
-.trim();
-
-const address =
-document
-.getElementById("customerAddress")
-.value
-.trim();
-
-
-if(!name || !phone || !city || !address){
-
-alert("Please fill all information.");
-
-return;
-
-}
-
-
-let message =
-"New Order - Rahat Shoes\n\n";
-
-
-message += "Name: " + name + "\n";
-
-message += "Phone: " + phone + "\n";
-
-message += "City: " + city + "\n";
-
-message += "Address: " + address + "\n\n";
-
-message += "Order Details:\n";
-
-
-let total = 0;
-
-
-cart.forEach(item=>{
-
-const itemTotal =
-item.price * item.quantity;
-
-total += itemTotal;
-
-message +=
-item.name +
-" x " +
-item.quantity +
-" = PKR " +
-itemTotal.toLocaleString() +
-"\n";
-
-});
-
-
-message +=
-"\nTotal: PKR " +
-total.toLocaleString();
-
-
-const whatsappNumber =
-"923041500185";
-
-
-const whatsappURL =
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(message);
-
-
-window.open(
-whatsappURL,
-"_blank"
-);
-
-}
-
-</script>
-
-</body>
-</html>
