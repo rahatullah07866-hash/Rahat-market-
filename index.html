@@ -9,7 +9,9 @@
 
 <link rel="stylesheet" href="Style.css">
 
-<title>Sada market</title>
+<script src="Script.js"></script>
+
+<title>SADA MARKET</title>
 
 </head>
 
@@ -19,7 +21,9 @@
 <!-- IMAGE VIEWER -->
 
 <div id="imageViewer" onclick="closeImage()">
+
     <img id="bigImage" alt="Product Image">
+
 </div>
 
 
@@ -32,7 +36,7 @@
         <input
             type="text"
             id="searchInput"
-            placeholder="Search shoes..."
+            placeholder="Search ..."
             onkeyup="searchProducts()"
         >
 
@@ -47,11 +51,14 @@
         class="cart-button"
         onclick="toggleCart()">
 
-        🛒 Cart (<span id="cartCount">0</span>)
+        🛒(<span id="cartCount">0</span>)
 
     </button>
 
 </div>
+
+
+
 
 
 <!-- CART -->
@@ -61,15 +68,22 @@
     <h2>🛒 Your Cart</h2>
 
     <div id="cartItems">
+
         <p>Your cart is empty.</p>
+
     </div>
 
     <h3>
-        Total: PKR <span id="cartTotal">0</span>
+        Total: PKR
+        <span id="cartTotal">0</span>
     </h3>
 
-    <button type="button" onclick="openCheckout()">
+    <button
+        type="button"
+        onclick="openCheckout()">
+
         Checkout
+
     </button>
 
     <button
@@ -87,8 +101,11 @@
 <!-- HEADER -->
 
 <header>
-
-    <h1>Rahat Shoes</h1>
+<div class="brand">
+    <button class="menu-btn">☰</button>
+  
+    <span>SADA~MARKET</span>
+</div>
 
     <nav>
 
@@ -128,6 +145,7 @@
 
 
 <!-- HERO -->
+
 <section id="home" class="hero">
 
     <div class="hero-content">
@@ -144,8 +162,12 @@
 
         <p>Step Into Style & Comfort</p>
 
-        <button type="button" onclick="goCategory('sports')">
+        <button
+            type="button"
+            onclick="goCategory('sports')">
+
             Shop Now
+
         </button>
 
     </div>
@@ -162,10 +184,12 @@
     <div class="category-container">
 
 
-        <div class="category-card" onclick="goCategory('men')">
+        <div
+            class="category-card"
+            onclick="goCategory('men')">
 
             <img
-                src="images/running3.jpg"
+                src="Images/running3.jpg"
                 alt="Men's Shoes">
 
             <h3>Men's Shoes</h3>
@@ -173,7 +197,9 @@
         </div>
 
 
-        <div class="category-card" onclick="goCategory('women')">
+        <div
+            class="category-card"
+            onclick="goCategory('women')">
 
             <img
                 src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=80"
@@ -184,7 +210,9 @@
         </div>
 
 
-        <div class="category-card" onclick="goCategory('sports')">
+        <div
+            class="category-card"
+            onclick="goCategory('sports')">
 
             <img
                 src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=500&q=80"
@@ -195,7 +223,9 @@
         </div>
 
 
-        <div class="category-card" onclick="goCategory('casual')">
+        <div
+            class="category-card"
+            onclick="goCategory('casual')">
 
             <img
                 src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=500&q=80"
@@ -206,7 +236,9 @@
         </div>
 
 
-        <div class="category-card" onclick="goCategory('sandals')">
+        <div
+            class="category-card"
+            onclick="goCategory('sandals')">
 
             <img
                 src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=500&q=80"
@@ -217,10 +249,12 @@
         </div>
 
 
-        <div class="category-card" onclick="goCategory('boots')">
+        <div
+            class="category-card"
+            onclick="goCategory('boots')">
 
             <img
-                src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=500&q=80"
+                src="Images/boots.jpg"
                 alt="Boots">
 
             <h3>Boots</h3>
@@ -237,7 +271,6 @@
 
 <section id="products">
 
-
     <h2>Featured Products</h2>
 
 
@@ -245,10 +278,14 @@
 
     <div class="product-category" id="men">
 
-        <h3 class="category-title">👞 Men's Shoes</h3>
+        <h3 class="category-title">
+            👞 Men's Shoes
+        </h3>
 
         <div class="product-row">
 
+
+            <!-- MEN PRODUCT 1 -->
 
             <div
                 class="product"
@@ -258,12 +295,7 @@
                 <div class="sneaker-gallery">
 
                     <img
-                        src="images/sneaker1.jpg"
-                        alt="Sports Sneakers"
-                        onclick="openImage(this.src)">
-
-                    <img
-                        src="images/sneaker2.jpg"
+                        src="Images/sneaker2.jpg"
                         alt="Sports Sneakers"
                         onclick="openImage(this.src)">
 
@@ -271,14 +303,27 @@
 
                 <h3>Sports Sneakers</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.8</span>
+
+                </div>
+
                 <p>PKR 3999</p>
 
-                <button onclick="addProduct('Sports Sneakers',3999)">
+                <button
+                    onclick="addProduct('Sports Sneakers',3999)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- MEN PRODUCT 2 -->
 
             <div
                 class="product"
@@ -292,14 +337,61 @@
 
                 <h3>Casual Sneakers</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.6</span>
+
+                </div>
+
                 <p>PKR 3199</p>
 
-                <button onclick="addProduct('Casual Sneakers',3199)">
+                <button
+                    onclick="addProduct('Casual Sneakers',3199)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- MEN PRODUCT 3 -->
+
+            <div
+                class="product"
+                data-name="Casual Sneakers"
+                data-category="men casual">
+
+                <img
+                    src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+                    alt="Casual Sneakers"
+                    onclick="openImage(this.src)">
+
+                <h3>Casual Sneakers</h3>
+
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.6</span>
+
+                </div>
+
+                <p>PKR 3199</p>
+
+                <button
+                    onclick="addProduct('Casual Sneakers',3199)">
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+
+            <!-- MEN PRODUCT 4 -->
 
             <div
                 class="product"
@@ -313,10 +405,21 @@
 
                 <h3>Men Sandal</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★☆</span>
+
+                    <span class="rating-number">4.4</span>
+
+                </div>
+
                 <p>PKR 2299</p>
 
-                <button onclick="addProduct('Men Sandal',2299)">
+                <button
+                    onclick="addProduct('Men Sandal',2299)">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -331,10 +434,14 @@
 
     <div class="product-category" id="women">
 
-        <h3 class="category-title">👠 Women's Shoes</h3>
+        <h3 class="category-title">
+            👠 Women's Shoes
+        </h3>
 
         <div class="product-row">
 
+
+            <!-- WOMEN PRODUCT 1 -->
 
             <div
                 class="product"
@@ -348,14 +455,27 @@
 
                 <h3>Women's Shoes</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.9</span>
+
+                </div>
+
                 <p>PKR 3499</p>
 
-                <button onclick="addProduct('Women Shoes',3499)">
+                <button
+                    onclick="addProduct('Women Shoes',3499)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- WOMEN PRODUCT 2 -->
 
             <div
                 class="product"
@@ -363,20 +483,33 @@
                 data-category="women casual">
 
                 <img
-                    src="images/women casual.jpg"
+                    src="Images/women casual.jpg"
                     alt="Women Casual Shoes"
                     onclick="openImage(this.src)">
 
                 <h3>Women Casual Shoes</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.7</span>
+
+                </div>
+
                 <p>PKR 3699</p>
 
-                <button onclick="addProduct('Women Casual Shoes',3699)">
+                <button
+                    onclick="addProduct('Women Casual Shoes',3699)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- WOMEN PRODUCT 3 -->
 
             <div
                 class="product"
@@ -384,20 +517,33 @@
                 data-category="women casual">
 
                 <img
-                    src="images/women casual2.jpg"
+                    src="Images/women casual2.jpg"
                     alt="Women Casual Shoes"
                     onclick="openImage(this.src)">
 
                 <h3>Women Casual Shoes</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.7</span>
+
+                </div>
+
                 <p>PKR 3699</p>
 
-                <button onclick="addProduct('Women Casual Shoes 2',3699)">
+                <button
+                    onclick="addProduct('Women Casual Shoes 2',3699)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- WOMEN PRODUCT 4 -->
 
             <div
                 class="product"
@@ -411,10 +557,21 @@
 
                 <h3>Women Sneakers</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.8</span>
+
+                </div>
+
                 <p>PKR 3999</p>
 
-                <button onclick="addProduct('Women Sneakers',3999)">
+                <button
+                    onclick="addProduct('Women Sneakers',3999)">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -429,10 +586,14 @@
 
     <div class="product-category" id="sports">
 
-        <h3 class="category-title">👟 Sports Shoes</h3>
+        <h3 class="category-title">
+            👟 Sports Shoes
+        </h3>
 
         <div class="product-row">
 
+
+            <!-- SPORTS PRODUCT 1 -->
 
             <div
                 class="product"
@@ -442,7 +603,7 @@
                 <div class="sneaker-gallery">
 
                     <img
-                        src="images/sneaker2.jpg"
+                        src="Images/sneaker1.jpg"
                         alt="Sports Sneakers"
                         onclick="openImage(this.src)">
 
@@ -450,14 +611,27 @@
 
                 <h3>Sports Sneakers</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.8</span>
+
+                </div>
+
                 <p>PKR 3999</p>
 
-                <button onclick="addProduct('Sports Sneakers',3999)">
+                <button
+                    onclick="addProduct('Sports Sneakers',3999)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- SPORTS PRODUCT 2 -->
 
             <div
                 class="product"
@@ -465,20 +639,33 @@
                 data-category="sports">
 
                 <img
-                    src="images/running3.jpg"
+                    src="Images/running3.jpg"
                     alt="Running Shoes"
                     onclick="openImage(this.src)">
 
                 <h3>Running Shoes</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.7</span>
+
+                </div>
+
                 <p>PKR 4299</p>
 
-                <button onclick="addProduct('Running Shoes 3',4299)">
+                <button
+                    onclick="addProduct('Running Shoes 3',4299)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- SPORTS PRODUCT 3 -->
 
             <div
                 class="product"
@@ -486,20 +673,33 @@
                 data-category="sports">
 
                 <img
-                    src="images/running1.jpg"
+                    src="Images/running1.jpg"
                     alt="Running Shoes"
                     onclick="openImage(this.src)">
 
                 <h3>Running Shoes</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.7</span>
+
+                </div>
+
                 <p>PKR 4299</p>
 
-                <button onclick="addProduct('Running Shoes 1',4299)">
+                <button
+                    onclick="addProduct('Running Shoes 1',4299)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- SPORTS PRODUCT 4 -->
 
             <div
                 class="product"
@@ -513,10 +713,21 @@
 
                 <h3>Training Shoes</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★☆</span>
+
+                    <span class="rating-number">4.5</span>
+
+                </div>
+
                 <p>PKR 4499</p>
 
-                <button onclick="addProduct('Training Shoes',4499)">
+                <button
+                    onclick="addProduct('Training Shoes',4499)">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -531,10 +742,14 @@
 
     <div class="product-category" id="casual">
 
-        <h3 class="category-title">👟 Casual Shoes</h3>
+        <h3 class="category-title">
+            👟 Casual Shoes
+        </h3>
 
         <div class="product-row">
 
+
+            <!-- CASUAL PRODUCT 1 -->
 
             <div
                 class="product"
@@ -548,14 +763,27 @@
 
                 <h3>Casual Sneakers</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.6</span>
+
+                </div>
+
                 <p>PKR 3199</p>
 
-                <button onclick="addProduct('Casual Sneakers',3199)">
+                <button
+                    onclick="addProduct('Casual Sneakers',3199)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- CASUAL PRODUCT 2 -->
 
             <div
                 class="product"
@@ -569,10 +797,21 @@
 
                 <h3>Casual Shoes</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.6</span>
+
+                </div>
+
                 <p>PKR 3399</p>
 
-                <button onclick="addProduct('Casual Shoes',3399)">
+                <button
+                    onclick="addProduct('Casual Shoes',3399)">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -587,10 +826,14 @@
 
     <div class="product-category" id="sandals">
 
-        <h3 class="category-title">🩴 Sandals</h3>
+        <h3 class="category-title">
+            🩴 Sandals
+        </h3>
 
         <div class="product-row">
 
+
+            <!-- SANDAL PRODUCT 1 -->
 
             <div
                 class="product"
@@ -604,14 +847,27 @@
 
                 <h3>Men Sandal</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★☆</span>
+
+                    <span class="rating-number">4.4</span>
+
+                </div>
+
                 <p>PKR 2299</p>
 
-                <button onclick="addProduct('Men Sandal',2299)">
+                <button
+                    onclick="addProduct('Men Sandal',2299)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- SANDAL PRODUCT 2 -->
 
             <div
                 class="product"
@@ -625,10 +881,21 @@
 
                 <h3>Ladies Sandal</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★☆</span>
+
+                    <span class="rating-number">4.5</span>
+
+                </div>
+
                 <p>PKR 2499</p>
 
-                <button onclick="addProduct('Ladies Sandal',2499)">
+                <button
+                    onclick="addProduct('Ladies Sandal',2499)">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -643,10 +910,14 @@
 
     <div class="product-category" id="boots">
 
-        <h3 class="category-title">🥾 Boots</h3>
+        <h3 class="category-title">
+            🥾 Boots
+        </h3>
 
         <div class="product-row">
 
+
+            <!-- BOOTS PRODUCT 1 -->
 
             <div
                 class="product"
@@ -660,14 +931,27 @@
 
                 <h3>Lindy Boots</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span clclass="rating-number">4.8</span>
+
+                </div>
+
                 <p>PKR 5499</p>
 
-                <button onclick="addProduct('Lindy Boots',5499)">
+                <button
+                    onclick="addProduct('Lindy Boots',5499)">
+
                     Add to Cart
+
                 </button>
 
             </div>
 
+
+            <!-- BOOTS PRODUCT 2 -->
 
             <div
                 class="product"
@@ -675,16 +959,27 @@
                 data-category="boots">
 
                 <img
-                    src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80"
+                    src="Images/boots.jpg"
                     alt="Classic Boots"
                     onclick="openImage(this.src)">
 
                 <h3>Classic Boots</h3>
 
+                <div class="product-rating">
+
+                    <span class="stars">★★★★★</span>
+
+                    <span class="rating-number">4.7</span>
+
+                </div>
+
                 <p>PKR 5999</p>
 
-                <button onclick="addProduct('Classic Boots',5999)">
+                <button
+                    onclick="addProduct('Classic Boots',5999)">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -749,145 +1044,108 @@
 </div>
 
 
+<!-- CONTACT US -->
+
+<section id="contact" class="contact-section">
+
+    <div class="contact-card">
+
+        <h2>Contact Us</h2>
+
+        <p class="contact-intro">
+            We're here to help. Feel free to contact us.
+        </p>
+
+        <div class="contact-details">
+
+            <div class="contact-line">
+
+                <span>📱</span>
+
+                <strong>WhatsApp:</strong>
+
+                <a
+                    href="https://wa.me/923041500185"
+                    target="_blank">
+
+                    0304-1500185
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <span>📞</span>
+
+                <strong>Phone:</strong>
+
+                <a href="tel:+923348830863">
+
+                    03348830863
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <span>📧</span>
+
+                <strong>Email:</strong>
+
+                <a href="mailto:rahatullah07866@gmail.com">
+
+                    rahatullah07866@gmail.com
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <span>📍</span>
+
+                <strong>Location:</strong>
+
+                <span>Pakistan</span>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <span>🕐</span>
+
+                <strong>Working Hours:</strong>
+
+                <span>24 hour</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- FOOTER -->
 
-<footer id="contact">
+<footer>
 
-    <h3>Rahat Shoes</h3>
+    <h3>SADA~MARKET</h3>
 
     <p>Quality Shoes at Affordable Prices.</p>
 
-    <p>© 2026 Rahat Shoes. All Rights Reserved.</p>
+    <p>© 2026 SADA~MARKET. All Rights Reserved.</p>
 
 </footer>
 
 
-<script>
+</body>
 
-/* IMAGE VIEWER */
-
-function openImage(src){
-
-    document.getElementById("bigImage").src = src;
-
-    document.getElementById("imageViewer").style.display = "flex";
-
-}
-
-function closeImage(){
-
-    document.getElementById("imageViewer").style.display = "none";
-
-}
-
-
-/* CART */
-
-let cart = [];
-
-function toggleCart(){
-
-    document
-        .getElementById("cart")
-        .classList.toggle("show");
-
-}
-
-function addProduct(name,price){
-
-    const existing =
-        cart.find(item => item.name === name);
-
-    if(existing){
-
-        existing.quantity++;
-
-    }else{
-
-        cart.push({
-            name:name,
-            price:price,
-            quantity:1
-        });
-
-    }
-
-    updateCart();
-
-    document
-        .getElementById("cart")
-        .classList.add("show");
-
-}
-
-function updateCart(){
-
-    const cartItems =
-        document.getElementById("cartItems");
-
-    const cartTotal =
-        document.getElementById("cartTotal");
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    cartItems.innerHTML = "";
-
-    let total = 0;
-    let count = 0;
-
-    cart.forEach((item,index)=>{
-
-        const itemTotal =
-            item.price * item.quantity;
-
-        total += itemTotal;
-
-        count += item.quantity;
-
-        const div =
-            document.createElement("div");
-
-        div.className = "cart-item";
-
-        div.innerHTML = `
-
-            <strong>${item.name}</strong>
-
-            <p>
-                PKR ${item.price.toLocaleString()}
-            </p>
-
-            <button
-                class="qty-btn"
-                onclick="changeQuantity(${index},-1)">
-                −
-            </button>
-
-            ${item.quantity}
-
-            <button
-                class="qty-btn"
-                onclick="changeQuantity(${index},1)">
-                +
-            </button>
-
-            <button
-                class="remove-btn"
-                onclick="removeProduct(${index})">
-                Remove
-            </button>
-
-        `;
-
-        cartItems.appendChild(div);
-
-    });
-
-    if(cart.length === 0){
-
-        cartItems.innerHTML =
-            "<p>Your cart is empty.</p>";
-
-    }
-
+</html>
