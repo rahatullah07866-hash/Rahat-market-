@@ -381,7 +381,7 @@ function placeOrder() {
 
 
     // اپنا WhatsApp business number یہاں لگائیں
-    const whatsappNumber = "923XXXXXXXXX";
+    const whatsappNumber = "923041500185";
 
 
     const whatsappURL =
